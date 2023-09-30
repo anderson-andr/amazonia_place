@@ -1,0 +1,34 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+.menu_topo {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ align-items: center;
+ align-content: stretch;
+}
+
+.menu_topo span mat-icon {
+  flex-grow: 1;
+}
+
+
+.banner_topo {
+  display: flex;
+  background-color: #9A32CC;
+  justify-content: center;
+  padding: 5px 0 ;
+  height: 30px;
+ }
+
+
+ .banner_topo span{
+   font-size: 16px;
+   line-height: 19px;
+
+ }
