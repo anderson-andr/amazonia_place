@@ -4,16 +4,36 @@
   </mat-toolbar-row>
 
   <mat-toolbar-row class="menu_topo">
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">search</mat-icon>
-    <img src="" alt="">
-    <span>Second Line</span>
+    <mat-icon class="icon"  >search</mat-icon>
+    <span class="titulo"  [style.color]="corDoTexto">Amazônia Market</span>
+    <span>
+      <span class="menu">
+          <button class="menu_button"  [matMenuTriggerFor]="menu" >
+            <mat-icon class="icon_button" >person</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <span >Entrar</span>
+            </button>
+            <button mat-menu-item>
+              <span>Cadastre-se</span>
+            </button>
+          </mat-menu>
+      </span>
+      <mat-icon class="icon">shopping_cart</mat-icon>
+
+    </span>
+
   </mat-toolbar-row>
 
-  <mat-toolbar-row>
-    <span>Third Line</span>
-    <span class="example-spacer"></span>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+  <mat-toolbar-row  class="menu_segundo">
+    <span>Ofertas do Dia</span>
+    
+    <span>Por Categorias</span>
+    <span>Tipos de Produtos</span>
+    <span>Kits Incríveis</span>
+    <span>Mais Buscados</span>
+    <span>Seleção Especial</span>
   </mat-toolbar-row>
 </mat-toolbar>
 
