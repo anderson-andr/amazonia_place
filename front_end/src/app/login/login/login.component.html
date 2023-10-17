@@ -1,0 +1,33 @@
+<section>
+  <div class="container">
+    <div class="right">
+        <img src="https://amazonmartekarquivosmidia.s3.sa-east-1.amazonaws.com/banner_login.png" alt="imagen de animais da floresta amazônica e as palavras Amazônia e Market">
+
+    </div>
+    <div class="left">
+      <div class="container_form" >
+        <h1>Login</h1>
+        <mat-form-field class="form">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+
+        </mat-form-field>
+        <button> Entrar</button>
+
+        <h3> ou </h3>
+
+        <button>Cadastre-se</button>
+
+      </div>
+    </div>
+  </div>
+</section>

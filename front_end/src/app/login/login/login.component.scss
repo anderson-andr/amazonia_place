@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 0;
+
+}
+
+
+.right {
+  float: right;
+  width: 50%;
+  max-height: 600px;
+}
+.right img {
+  width: 100%;
+  max-height: 600px;
+}
+.left {
+  float: left;
+  width: 50%;
+  max-height: 600px;
+}
+.container_form {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.container_form h1 {
+  font-weight:lighter ;
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.form {
+  display: block;
+  width: 80%;
+  flex-direction: column;
+  margin: 0 auto;
+
+}
+mat-form-field  {
+  margin-left: 8px;
+  width: 80%;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+
+$largura-maxima-desktop: 1024px;
+$largura-maxima-tablet: 768px;
+$espacamento-padrao: 20px;
+
+@media screen and (max-width: $largura-maxima-tablet) {
+  // Defina estilos para telas de tablet e menores
+  .container {
+    width:100%;
+    display: block;
+  }
+
+  .right {
+    float: none;
+    width: 80%;
+    margin: 10px auto;
+
+  }
+
+  .left {
+    margin-top: 20px;
+    float: none;
+    width: 100%;
+    max-height: 400px;
+  }
+}

@@ -1,0 +1,50 @@
+
+
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.texto_topo h1{
+  font-family: Poppins,sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 130%;
+  text-align: center;
+  color: #333;
+  display: block;
+  width: 555px;
+  max-width: 100%;
+  margin: 44px auto;
+  margin-bottom: 44px;
+  padding: 60px;
+  text-align: center;
+}
+.container {
+   display: flex;
+   width: 100%;
+   margin: 0 auto;
+   flex-wrap: wrap;
+
+
+}
+
+.card {
+	max-width: 250px;
+	margin: 5px auto;
+	display: flex;
+	border: none;
+  box-shadow: none;
+  border-radius: 8px;
+
+}
+.card img {
+    flex-basis: 400px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-radius: 8px;
+
+}
+.texto_card {
+margin-top: 20px;
+}

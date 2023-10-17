@@ -5,14 +5,14 @@
 
   <mat-toolbar-row class="menu_topo">
     <mat-icon class="icon"  >search</mat-icon>
-    <span class="titulo"  [style.color]="corDoTexto">Amazônia Market</span>
+    <span class="titulo"  [style.color]="corDoTexto" routerLink="/">Amazônia Market</span>
     <span>
       <span class="menu">
           <button class="menu_button"  [matMenuTriggerFor]="menu" >
             <mat-icon class="icon_button" >person</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item>
+            <button (click)="onlogin()" mat-menu-item>
               <span >Entrar</span>
             </button>
             <button mat-menu-item>
@@ -28,7 +28,7 @@
 
   <mat-toolbar-row  class="menu_segundo">
     <span>Ofertas do Dia</span>
-    
+
     <span>Por Categorias</span>
     <span>Tipos de Produtos</span>
     <span>Kits Incríveis</span>
@@ -37,4 +37,6 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<router-outlet>
+
+</router-outlet>
