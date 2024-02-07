@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+       /* Language and Environment */
+   "strictPropertyInitialization": false,
+   "target": "es6",              
+   /* Modules */
+   "module": "commonjs",                    
+   "outDir": "./build",                      
+   "esModuleInterop": true,                 
+   "forceConsistentCasingInFileNames": true,
+   /* Type Checking */
+   "strict": true,       
+   "skipLibCheck": true,
+   /* Importante para trabalhar com Decorator (@)*/
+   "emitDecoratorMetadata": true,
+   "experimentalDecorators": true,
+  }
+}
