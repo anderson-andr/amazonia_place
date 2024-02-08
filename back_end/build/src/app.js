@@ -18,11 +18,13 @@ data_source_1.AppDataSource.initialize().then(() => __awaiter(void 0, void 0, vo
     console.log("iniciando banco de dados");
 })).catch(error => console.log(error));
 const store_1 = __importDefault(require("../routes/store"));
+const user_1 = __importDefault(require("../routes/user"));
 const app = (0, express_1.default)();
 const port = 3000;
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use('/api/store', store_1.default);
+app.use('/api/user', user_1.default);
 app.listen(port, () => {
     console.log("Iniciando na porta " + port);
 });

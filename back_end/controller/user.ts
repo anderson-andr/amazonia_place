@@ -21,8 +21,6 @@ export class UserController {
         !userRequest.email||
         !userRequest.password||
         !userRequest.type ||
-        !userRequest.dt_created||
-        !userRequest.dt_updated ||
         !userRequest.id_store
 
       ) {
@@ -32,20 +30,21 @@ export class UserController {
       }
   
       const user = new User();
+      const dataAtual: Date = new Date();
       user.name       = userRequest.name;
       user.email      = userRequest.email;
       user.password   = userRequest.password;
       user.type       = userRequest.type;
-      user.dt_created = userRequest.dt_created;
-      user.dt_updated = userRequest.dt_updated;
+      user.dt_created = dataAtual;
+      user.dt_updated = dataAtual;
       user.id_store   = userRequest.id_store;
 
   
       const datasource     = await AppDataSource;
   
       const userRepository = datasource.getRepository(User);
-      const userSalve      = await userRepository.save(User);
-      res.status(201).json(userSalve);
+      const userSalvo      = await userRepository.save(user);
+      res.status(201).json(userSalvo);
     }
   
     async delete(req: any, res: any) {
@@ -63,14 +62,13 @@ export class UserController {
   
       const id = req.params.id;
       const userRequest= req.body;
+      const dataAtual: Date = new Date();
       if (
         !userRequest ||
         !userRequest.name ||
         !userRequest.email||
         !userRequest.password||
         !userRequest.type ||
-        !userRequest.dt_created||
-        !userRequest.dt_updated ||
         !userRequest.id_store
   
       ) {
@@ -84,7 +82,7 @@ export class UserController {
         password   :  userRequest.password,
         type       :  userRequest.type,
         dt_created :  userRequest.dt_created,
-        dt_updated :  userRequest.dt_updated,
+        dt_updated :  dataAtual,
         id_store   :  userRequest.id_store,
         
       });

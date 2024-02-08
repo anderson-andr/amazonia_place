@@ -3,6 +3,7 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
 import { Store } from "./entities/Store"
+import { User } from "./entities/User"
 
 export const AppDataSource = new DataSource({
     type: "mysql",
@@ -13,7 +14,7 @@ export const AppDataSource = new DataSource({
     database: "amazon_mkt",
     synchronize: true,
     logging: true,
-    entities: [Store],
+    entities: [Store,User],
     subscribers: [],
     migrations: [],
 })

@@ -9,9 +9,6 @@ export class User  extends BaseEntity {
   name: string;
 
   @Column()
-  description: string;
-
-  @Column()
   email:string;
 
   @Column()
@@ -24,7 +21,7 @@ export class User  extends BaseEntity {
   dt_created:Date;
 
   @Column()
-  dt_updated:string;
+  dt_updated:Date;
 
   @Column()
   id_store:number;
